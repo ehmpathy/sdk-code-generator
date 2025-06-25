@@ -47,7 +47,7 @@ or
 for example, choose endpoints via imports
 
 ```ts
-// codegen.sdk.introspect.ts
+// codegen.sdk.ts
 import { ApiEndpoint } from 'as-endpoint';
 import { ConfigIntrospectApi } from '@ehmpathy/sdk-code-generator';
 
@@ -117,6 +117,7 @@ for example
 ```ts
 // @src/data/sdk/svcJokes.ts
 
+import { DomainEntity } from 'domain-objects';
 import { createCache } from 'simple-in-memory-cache';
 import { invokeLambdaFunction } from 'simple-lambda-client';
 import { HasMetadata } from 'type-fns';
@@ -138,7 +139,7 @@ export interface SvcJokesJoke {
   deliveryVideoUrl: string | null;
   deliveryWords: string;
 }
-export class SvcJokesJoke implements DomainEntity<SvcJokesJoke> extends SvcJokesJoke {
+export class SvcJokesJoke extends DomainEntity<SvcJokesJoke> implements SvcJokesJoke {
   public static primary = ['uuid'] as const
   public static unique = ['semanticHash', 'variantHash'] as const
 }
