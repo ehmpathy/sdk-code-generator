@@ -2,7 +2,7 @@
   "name": "@ehmpathy/sdk-code-generator",
   "author": "ehmpathy",
   "description": "sdk codegen via endpoint introspection. generate a pit-of-success sdk for any api",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": "ehmpathy/sdk-code-generator",
   "homepage": "https://github.com/ehmpathy/sdk-code-generator",
   "keywords": [
